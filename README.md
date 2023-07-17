@@ -1,2 +1,2 @@
 # UnityShadersCourse
-Simple repo to host a Unity Shaders repo course.
+Simple repo to host a Unity Shaders course.
