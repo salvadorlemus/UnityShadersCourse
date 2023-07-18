@@ -27,7 +27,8 @@ Shader "Custom/2_10_PackedPractive" {
 
 			// We can use different channel packed arrays names from our SurfaceOutput
 			// thanks to the fact that the elements in the _Color property ALWAYS used
-			// fixed names [rgba | xyzw] where x = r, y = g, z = b, w = a :
+			// fixed names [rgba | xyzw] where x = r, y = g, z = b, w = a  where
+			// r|x it's going to ALWAYS refer to the first element of my packed array :
 			// o.Albedo.r = _Color.x;
 			// o.Albedo.x = _Color.r;
 			// o.Albedo.x = _Color.x;
