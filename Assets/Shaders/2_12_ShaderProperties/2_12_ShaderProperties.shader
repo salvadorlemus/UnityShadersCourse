@@ -33,10 +33,23 @@ Shader "Custom/2_12_ShaderProperties" {
 
 		void surf (Input IN, inout SurfaceOutput o) {
 			// This is how we map the texture property into the Albedo chanel
-			o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+			//o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
 
 			// We can multiply the albedo chanel using the range property
-			o.Albedo *= _Range;
+			// this could increase the intensity of the color far more than 255
+			// resulting in a "burning"color image
+			//o.Albedo *= _Range;
+
+			// We can multiply the color with the main texture and the range value
+			//o.Albedo = (_Color * tex2D(_MainTex, IN.uv_MainTex)).rgb * _Range;
+
+			// Also, we can force the green chanel of the texture to full
+			//o.Albedo = (_Color * tex2D(_MainTex, IN.uv_MainTex)).rgb * _Range;
+			//o.Albedo.g = 1;
+
+			// We can even multiply the texture color with a green color to force
+			// the green chanel in the same calculation
+			// o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb * float4(0,1,0,1);
 			
 			// Apply the cube map using the world reflection vector
 			// and apply that information to the model emission chanel
