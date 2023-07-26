@@ -1,5 +1,7 @@
-Shader "Custom/2_12_ShaderProperties" {
-	Properties {
+Shader "Custom/2_12_ShaderProperties" 
+{
+	Properties 
+	{
 		_Color ("Example Color", Color) = (1,1,1,1)
 		_Range ("Ecample Range", Range(0, 10)) = 1
 		_MainTex ("Example Albedo (RGB)", 2D) = "white" {}
@@ -7,7 +9,8 @@ Shader "Custom/2_12_ShaderProperties" {
 		_Float ("Example Float", Float) = 1
 		_Vector ("Example Vector", Vector) = (1,1,1,1)
 	}
-	SubShader {	
+	SubShader 
+	{	
 		// Here starts my shader code	
 		CGPROGRAM
 
@@ -31,7 +34,8 @@ Shader "Custom/2_12_ShaderProperties" {
 			float3 worldRefl;
 		};
 
-		void surf (Input IN, inout SurfaceOutput o) {
+		void surf (Input IN, inout SurfaceOutput o)
+		{
 			// This is how we map the texture property into the Albedo chanel
 			//o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
 
