@@ -2,7 +2,7 @@
 // In this case it will live inside Course under the name of 1_7_SurfaceShader 
 Shader "Course/1_7_SurfaceShader"
 {
-    // Properties are where we declare variables that can be set inside Unity
+    // Properties are where we declare §variables that can be set inside Unity
     // and used inside my shader processing 
     Properties
     {
@@ -35,7 +35,7 @@ Shader "Course/1_7_SurfaceShader"
                 float2 uvMainTex;
             };
 
-            // To acces the property we created we need to declare a variable of the same
+            // To access the property we created we need to declare a variable of the same
             // type and name as the property, but with an underscore at the beginning
             fixed4 _Color;
             fixed4 _Emission;
